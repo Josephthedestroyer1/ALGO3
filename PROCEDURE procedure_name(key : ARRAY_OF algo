@@ -1,0 +1,14 @@
+PROCEDURE procedure_name(key : ARRAY_OF INTEGER[length];)
+VAR
+    i, j, key: INTEGER;
+BEGIN
+    FOR i FROM 1 TO High(arr) STEP 1  DO
+        key:arr[i];
+        j:= i - 1;
+    WHILE (j >= 1 and arr[j] > key) DO
+        arr[j+1]: = arr[j]
+        j: = j - 1
+    END_WHILE
+    arr[j + 1]:= key
+    END_FOR
+END
